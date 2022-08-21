@@ -1,0 +1,38 @@
+.row {
+    margin: 20px;
+}
+
+.row-posters {
+    /* make elements inside to be column based */
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row-poster {
+    /* keep img aspect ratios */
+    object-fit: contain; 
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    /* apply transition only on transform */
+    /* add delay to make imgs scale up smoothly */
+    transition: transform 450ms;
+}
+
+.row-poster:hover {
+    transform: scale(1.08);
+}
+
+.row-poster-larger {
+    max-height: 250px;
+}
+
+.row-poster-larger:hover {
+    transform: scale(1.09);
+}

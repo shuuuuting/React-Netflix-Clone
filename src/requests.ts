@@ -1,6 +1,6 @@
-const API_KEY = "9947189644abcdac58eecc56e390923a"
+import { API_KEY } from "./app.config"
 
-export default requests = {
+export const requests = {
     fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
     fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
     fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
