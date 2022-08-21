@@ -3,15 +3,7 @@ import axios from "../axios"
 import { BASE_IMG_URL } from "../app.config"
 import "../css/Row.css"
 
-export const Row = ({
-  title,
-  fetchUrl,
-  isLargeRow,
-}: {
-  title: string
-  fetchUrl: string
-  isLargeRow?: boolean
-}) => {
+export const Row = ({ title, fetchUrl, isLargeRow }: { title: string; fetchUrl: string; isLargeRow?: boolean }) => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
@@ -30,7 +22,10 @@ export const Row = ({
           <img
             key={movie.id}
             className={`row-poster ${isLargeRow && "row-poster-larger"}`}
-            src={`${BASE_IMG_URL}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+            src={movie.poster_path && movie.backdrop_path
+              ?`${BASE_IMG_URL}${isLargeRow ? movie?.poster_path : movie?.backdrop_path}`
+              : "" 
+            }
             alt={movie.name}
           />
         ))}
