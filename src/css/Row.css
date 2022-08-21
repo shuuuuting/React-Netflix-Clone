@@ -17,9 +17,9 @@
 
 .row-poster {
     /* keep img aspect ratios */
-    object-fit: contain; 
     width: 100%;
     max-height: 100px;
+    object-fit: contain; 
     margin-right: 10px;
     /* apply transition only on transform */
     /* add delay to make imgs scale up smoothly */
