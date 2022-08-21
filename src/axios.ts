@@ -12,4 +12,4 @@ export default instance
 
 // example:
 // instance.get("/foo-bar")
-// "http://api.themoviedb.org/3/foo-bar"
+// "https://api.themoviedb.org/3/foo-bar"
